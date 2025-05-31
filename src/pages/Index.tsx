@@ -3,6 +3,7 @@ import QuizSetup from '@/components/QuizSetup';
 import QuizGame from '@/components/QuizGame';
 import Leaderboard from '@/components/Leaderboard';
 import QuestionManager from '@/components/QuestionManager';
+import VantaBackground from '@/components/VantaBackground';
 import { Button } from '@/components/ui/button';
 import { Trophy, Play, Plus } from 'lucide-react';
 import Spline from '@splinetool/react-spline';
@@ -59,10 +60,16 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* 3D Spline Background */}
-      <div className="absolute inset-0 z-0">
-        <Spline scene="https://prod.spline.design/FZOQENShiCmLzl9J/scene.splinecode" />
-      </div>
+      {/* Conditional Background */}
+      {currentView === 'home' ? (
+        // 3D Spline Background for Home Page
+        <div className="absolute inset-0 z-0">
+          <Spline scene="https://prod.spline.design/FZOQENShiCmLzl9J/scene.splinecode" />
+        </div>
+      ) : (
+        // Vanta Birds Background for Other Pages
+        <VantaBackground />
+      )}
       
       {/* Content Overlay */}
       <div className="relative z-10">
