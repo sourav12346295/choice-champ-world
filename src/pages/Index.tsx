@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import QuizSetup from '@/components/QuizSetup';
 import QuizGame from '@/components/QuizGame';
@@ -77,55 +78,75 @@ const Index = () => {
           {currentView === 'home' && (
             <div className="text-center">
               <div className="mb-12">
-                <h1 className="text-6xl font-bold text-white mb-4 animate-pulse drop-shadow-2xl">
-                  QuizMaster Pro
+                <h1 className="text-6xl font-bold text-white mb-4 animate-pulse drop-shadow-2xl text-shadow-lg">
+                  <span className="bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 bg-clip-text text-transparent drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]">
+                    QuizMaster Pro
+                  </span>
                 </h1>
-                <p className="text-xl text-white mb-8 drop-shadow-lg">
-                  Challenge yourself with our interactive quiz platform
+                <p className="text-2xl text-white mb-8 drop-shadow-2xl font-semibold">
+                  <span className="bg-black/50 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/20">
+                    Challenge yourself with our interactive quiz platform
+                  </span>
                 </p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
                 <Button
                   onClick={() => setCurrentView('setup')}
-                  className="h-32 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl backdrop-blur-sm bg-opacity-90"
+                  className="h-32 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl backdrop-blur-sm bg-opacity-90 border border-white/20"
                 >
                   <div className="flex flex-col items-center gap-3">
                     <Play size={32} />
-                    <span>Start Quiz</span>
+                    <span className="drop-shadow-lg">Start Quiz</span>
                   </div>
                 </Button>
                 
                 <Button
                   onClick={() => setCurrentView('leaderboard')}
-                  className="h-32 bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl backdrop-blur-sm bg-opacity-90"
+                  className="h-32 bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl backdrop-blur-sm bg-opacity-90 border border-white/20"
                 >
                   <div className="flex flex-col items-center gap-3">
                     <Trophy size={32} />
-                    <span>Leaderboard</span>
+                    <span className="drop-shadow-lg">Leaderboard</span>
                   </div>
                 </Button>
                 
                 <Button
                   onClick={() => setCurrentView('manage')}
-                  className="h-32 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl backdrop-blur-sm bg-opacity-90"
+                  className="h-32 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl backdrop-blur-sm bg-opacity-90 border border-white/20"
                 >
                   <div className="flex flex-col items-center gap-3">
                     <Plus size={32} />
-                    <span>Manage Questions</span>
+                    <span className="drop-shadow-lg">Manage Questions</span>
                   </div>
                 </Button>
               </div>
               
-              <div className="mt-16 bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto border border-white/20">
-                <h2 className="text-2xl font-bold text-white mb-4">Features</h2>
-                <div className="grid md:grid-cols-2 gap-4 text-white">
-                  <div>• Single & Multiple Choice</div>
-                  <div>• Fill in the Blanks</div>
-                  <div>• Real-time Scoring</div>
-                  <div>• Interactive Leaderboard</div>
-                  <div>• Custom Questions</div>
-                  <div>• Responsive Design</div>
+              <div className="mt-16 bg-black/30 backdrop-blur-md rounded-2xl p-8 max-w-2xl mx-auto border border-white/30 shadow-2xl">
+                <h2 className="text-3xl font-bold text-white mb-6 drop-shadow-lg">
+                  <span className="bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
+                    Features
+                  </span>
+                </h2>
+                <div className="grid md:grid-cols-2 gap-4 text-white font-medium text-lg">
+                  <div className="bg-white/10 p-3 rounded-lg backdrop-blur-sm border border-white/20">
+                    <span className="drop-shadow-lg">• Single & Multiple Choice</span>
+                  </div>
+                  <div className="bg-white/10 p-3 rounded-lg backdrop-blur-sm border border-white/20">
+                    <span className="drop-shadow-lg">• Fill in the Blanks</span>
+                  </div>
+                  <div className="bg-white/10 p-3 rounded-lg backdrop-blur-sm border border-white/20">
+                    <span className="drop-shadow-lg">• Real-time Scoring</span>
+                  </div>
+                  <div className="bg-white/10 p-3 rounded-lg backdrop-blur-sm border border-white/20">
+                    <span className="drop-shadow-lg">• Interactive Leaderboard</span>
+                  </div>
+                  <div className="bg-white/10 p-3 rounded-lg backdrop-blur-sm border border-white/20">
+                    <span className="drop-shadow-lg">• Custom Questions</span>
+                  </div>
+                  <div className="bg-white/10 p-3 rounded-lg backdrop-blur-sm border border-white/20">
+                    <span className="drop-shadow-lg">• Responsive Design</span>
+                  </div>
                 </div>
               </div>
             </div>
